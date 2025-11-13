@@ -48,7 +48,6 @@ export const theme: ThemeUserConfig = {
   header: {
     menu: [
       { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs' },
       { title: 'Projects', link: '/projects' },
       { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
@@ -82,7 +81,7 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/cworld1/astro-theme-pure' }
+    social: { github: 'https://github.com/FiromMao' }
   },
 
   content: {
@@ -117,7 +116,7 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
+      { name: 'Link', val: 'firommao-blog.vercel.app' },
       { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
