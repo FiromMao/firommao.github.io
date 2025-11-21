@@ -79,7 +79,7 @@ export const theme: ThemeUserConfig = {
       }
     ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
-    credits: false,
+    credits: true,
     /** Optional details about the social media accounts for this site. */
     social: { github: 'https://github.com/FiromMao' }
   },
@@ -116,8 +116,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'firommao-blog.vercel.app' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: 'Link', val: 'your-domain.com' }, // 请修改为你的实际域名
+      { name: 'Avatar', val: '/favicon/favicon.ico' } // 或使用完整的头像 URL
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
     cacheAvatar: false
