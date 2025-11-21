@@ -116,7 +116,7 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'your-domain.com' }, // 请修改为你的实际域名
+      { name: 'Link', val: 'firommao-blog.vercel.app' }, // 请修改为你的实际域名
       { name: 'Avatar', val: '/favicon/favicon.ico' } // 或使用完整的头像 URL
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
