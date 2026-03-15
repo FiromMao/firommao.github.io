@@ -3,7 +3,14 @@
     {
       "id_name": "friends",
       "desc": "Sites I read and recommend",
-      "link_list": []
+      "link_list": [
+        {
+          "name": "星语的博客",
+          "intro": "学微电子的破大学生",
+          "link": "https://zhxylabflow.xyz/",
+          "avatar": "https://img.cdn1.vip/i/6958d73347225_1767429939.webp"
+        }
+      ]
     },
     {
       "id_name": "special-links",

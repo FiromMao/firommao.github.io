@@ -28,20 +28,38 @@ const applyTip = integ.links?.applyTip ?? []
 
 <CommonPage title='Links' {headings}>
   <h2 id='friend-links'>Friend Links</h2>
-  <p>This page is kept for future blogroll / friend-link use.</p>
+  <p>A small blogroll of sites I read, revisit, or want to recommend.</p>
 
   <section class='not-prose grid gap-3'>
     {[friendsGroup, specialGroup].filter(Boolean).map((group) => (
       <div class='rounded-xl border p-4'>
         <h3 class='mb-2 text-base font-medium text-foreground'>{group.desc}</h3>
         {group.link_list.length > 0 ? (
-          <ul class='grid gap-3'>
+          <ul class='grid gap-3 sm:grid-cols-2'>
             {group.link_list.map((item) => (
-              <li class='rounded-lg border p-3'>
-                <a href={item.link} target='_blank' rel='noopener noreferrer' class='font-medium'>
-                  {item.name}
+              <li class='rounded-xl border border-border/70 bg-muted/20 p-4 transition-colors hover:bg-muted/40'>
+                <a
+                  href={item.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  class='flex items-start gap-3 no-underline'
+                >
+                  <img
+                    src={item.avatar}
+                    alt={item.name}
+                    class='h-14 w-14 rounded-full border object-cover'
+                    loading='lazy'
+                    referrerpolicy='no-referrer'
+                  />
+                  <div class='min-w-0 flex-1'>
+                    <div class='flex items-center justify-between gap-3'>
+                      <span class='font-medium text-foreground'>{item.name}</span>
+                      <span class='text-xs text-muted-foreground'>Visit</span>
+                    </div>
+                    <p class='mt-1 line-clamp-2 text-sm text-muted-foreground'>{item.intro}</p>
+                    <p class='mt-2 break-all text-xs text-muted-foreground'>{item.link}</p>
+                  </div>
                 </a>
-                <p class='mt-1 text-sm text-muted-foreground'>{item.intro}</p>
               </li>
             ))}
           </ul>
