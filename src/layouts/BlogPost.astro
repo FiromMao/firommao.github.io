@@ -42,6 +42,7 @@ const socialImage = heroImage
   : '/images/social-card.png'
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-text-opacity))'
+const showComments = Boolean(integ.waline.enable && enableComment)
 ---
 
 <PageLayout
@@ -53,7 +54,7 @@ const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-tex
 
   <Hero {data} {remarkPluginFrontmatter} slot='header'>
     <Fragment slot='description'>
-      {!isDraft && enableComment && <PageInfo comment class='mt-1' />}
+      {!isDraft && showComments && <PageInfo comment class='mt-1' />}
     </Fragment>
   </Hero>
 
@@ -65,7 +66,7 @@ const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-tex
     {/* Article recommend */}
     <ArticleBottom collections={posts} {id} class='mt-3 sm:mt-6' />
     {/* Comment */}
-    {!isDraft && enableComment && <Comment class='mt-3 sm:mt-6' />}
+    {!isDraft && showComments && <Comment class='mt-3 sm:mt-6' />}
   </Fragment>
 
   <slot name='bottom-sidebar' slot='bottom-sidebar' />
