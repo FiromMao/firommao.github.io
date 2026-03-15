@@ -1,5 +1,5 @@
 ---
-title: '『工具纪元』导语'
+title: 'Introduction to The Age of Tools'
 publishDate: '2025-11-18'
 updatedDate: '2025-11-18'
 description: '人类的文明史，或许就是一部“权力让渡史”。在这个工具塑造我们的时代，我们该如何守护人之为人的自主与尊严？'

@@ -1,5 +1,5 @@
 ---
-title: '使用LLM替代奖励模型作为人类偏好代理'
+title: 'Using LLMs as Human Preference Proxies Instead of Reward Models'
 description: 'LLM作为压缩了大量人类偏好描述的集合，实际上已经可以替代许多“手动学习人类偏好”的工作，比如强化学习中奖励函数的设计'
 publishDate: '2026-03-15'
 updateDate: '2026-03-15'
