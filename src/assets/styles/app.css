@@ -3,15 +3,18 @@
 /* Font */
 html {
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  font-family: var(--font-sans);
+  --font-serif:
+    'Source Serif 4', 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'Source Han Serif SC',
+    Georgia, 'Times New Roman', serif;
+  font-family: var(--font-serif);
   font-feature-settings: 'liga' 1, 'calt' 1;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: var(--font-sans);
-  letter-spacing: -0.01em;
+  font-family: var(--font-serif);
+  letter-spacing: -0.008em;
+  line-height: 1.75;
 }
 
 h1,
@@ -35,12 +38,12 @@ h6,
 .prose p,
 .prose li,
 .prose blockquote {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
 }
 
 .prose blockquote {
   font-family: var(--font-serif);
-  font-size: 1.05em;
+  font-size: 1.08em;
 }
 
 button,
@@ -48,53 +51,68 @@ input,
 select,
 textarea,
 a,
-samp {
+samp,
+nav,
+header,
+footer {
   font-family: inherit;
+}
+
+button,
+input,
+select,
+textarea,
+samp,
+nav,
+header,
+footer,
+[role='button'] {
+  font-family: var(--font-sans);
 }
 
 /* Theme */
 :root {
-  --background: 210 33% 99%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 200 29% 45%;
-  --primary-foreground: 0 0% 92.5%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95%;
-  --muted-foreground: 240 3.8% 28.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
+  --background: 36 31% 96%;
+  --foreground: 18 18% 17%;
+  --card: 42 29% 98%;
+  --card-foreground: 18 18% 17%;
+  --popover: 42 29% 98%;
+  --popover-foreground: 18 18% 17%;
+  --primary: 24 36% 34%;
+  --primary-foreground: 40 33% 96%;
+  --secondary: 34 23% 91%;
+  --secondary-foreground: 18 18% 17%;
+  --muted: 34 22% 92%;
+  --muted-foreground: 24 12% 34%;
+  --accent: 34 23% 91%;
+  --accent-foreground: 18 18% 17%;
   --destructive: 0 72.22% 50.59%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 88%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
+  --border: 30 18% 84%;
+  --input: 30 18% 86%;
+  --ring: 24 36% 34%;
   --radius: 0.5rem;
 }
 .dark {
-  --background: 240 20.54% 5.2%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 195 95% 85%;
-  --primary-foreground: 240 3.7% 15.9%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 5.9% 12%;
-  --muted-foreground: 240 5% 74.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
+  --background: 24 16% 10%;
+  --foreground: 36 24% 91%;
+  --card: 22 14% 12%;
+  --card-foreground: 36 24% 91%;
+  --popover: 22 14% 12%;
+  --popover-foreground: 36 24% 91%;
+  --primary: 34 42% 72%;
+  --primary-foreground: 24 16% 10%;
+  --secondary: 24 10% 18%;
+  --secondary-foreground: 36 24% 91%;
+  --muted: 24 10% 16%;
+  --muted-foreground: 30 17% 73%;
+  --accent: 24 10% 18%;
+  --accent-foreground: 36 24% 91%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 19.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
+  --border: 24 10% 22%;
+  --input: 24 10% 18%;
+  --ring: 34 42% 72%;
 }
 :root {
   --un-default-border-color: hsl(var(--border) / 1);
