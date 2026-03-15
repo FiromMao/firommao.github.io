@@ -23,6 +23,7 @@ const headings = [
 ]
 
 const [friendsGroup, specialGroup] = links.friends as LinkGroup[]
+const applyTip = integ.links?.applyTip ?? []
 ---
 
 <CommonPage title='Links' {headings}>
@@ -55,7 +56,7 @@ const [friendsGroup, specialGroup] = links.friends as LinkGroup[]
   <p>You can use the following site info when adding this blog elsewhere.</p>
   <blockquote class='not-prose grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 rounded-xl border p-4'>
     {
-      integ.links.applyTip.map(({ name, val }) => (
+      applyTip.map(({ name, val }) => (
         <>
           <span class='text-right text-sm text-muted-foreground'>{name}:</span>
           <samp class='break-all text-sm'>{val}</samp>
