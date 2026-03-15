@@ -1,0 +1,53 @@
+---
+import links from 'public/links.json'
+
+import CommonPage from '@/layouts/CommonPage.astro'
+import { integ } from '@/site-config'
+
+const headings = [
+  { depth: 2, slug: 'friend-links', text: 'Friend Links' },
+  { depth: 2, slug: 'apply-links', text: 'Apply' }
+]
+
+const [friendsGroup, specialGroup] = links.friends
+---
+
+<CommonPage title='Links' {headings}>
+  <h2 id='friend-links'>Friend Links</h2>
+  <p>This page is kept for future blogroll / friend-link use.</p>
+
+  <section class='not-prose grid gap-3'>
+    {[friendsGroup, specialGroup].filter(Boolean).map((group) => (
+      <div class='rounded-xl border p-4'>
+        <h3 class='mb-2 text-base font-medium text-foreground'>{group.desc}</h3>
+        {group.link_list.length > 0 ? (
+          <ul class='grid gap-3'>
+            {group.link_list.map((item) => (
+              <li class='rounded-lg border p-3'>
+                <a href={item.link} target='_blank' rel='noopener noreferrer' class='font-medium'>
+                  {item.name}
+                </a>
+                <p class='mt-1 text-sm text-muted-foreground'>{item.intro}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class='text-sm text-muted-foreground'>No links added yet.</p>
+        )}
+      </div>
+    ))}
+  </section>
+
+  <h2 id='apply-links'>Apply</h2>
+  <p>You can use the following site info when adding this blog elsewhere.</p>
+  <blockquote class='not-prose grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 rounded-xl border p-4'>
+    {
+      integ.links.applyTip.map(({ name, val }) => (
+        <>
+          <span class='text-right text-sm text-muted-foreground'>{name}:</span>
+          <samp class='break-all text-sm'>{val}</samp>
+        </>
+      ))
+    }
+  </blockquote>
+</CommonPage>

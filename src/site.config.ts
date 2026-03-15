@@ -29,14 +29,31 @@ export const theme: ThemeUserConfig = {
   header: {
     menu: [
       { title: 'Blog', link: '/blog' },
-      { title: 'Archives', link: '/archives' },
-      { title: 'Search', link: '/search' }
+      { title: 'Projects', link: '/projects' },
+      { title: 'Links', link: '/links' },
+      { title: 'About', link: '/about' }
     ]
   },
 
   footer: {
     year: `© ${new Date().getFullYear()}`,
-    links: [],
+    links: [
+      {
+        title: 'Archives',
+        link: '/archives',
+        style: 'text-sm'
+      },
+      {
+        title: 'Search',
+        link: '/search',
+        style: 'text-sm'
+      },
+      {
+        title: 'Site Policy',
+        link: '/terms/list',
+        pos: 2
+      }
+    ],
     credits: true,
     social: {
       github: 'https://github.com/FiromMao'
@@ -57,9 +74,20 @@ export const theme: ThemeUserConfig = {
 
 export const integ: IntegrationUserConfig = {
   links: {
+    logbook: [],
+    applyTip: [
+      { name: 'Name', val: theme.title },
+      { name: 'Desc', val: theme.description || '' },
+      { name: 'Link', val: 'https://firommao.github.io' },
+      { name: 'Avatar', val: '/favicon/favicon.ico' }
+    ],
     cacheAvatar: false
   },
   pagefind: true,
+  quote: {
+    server: 'https://dummyjson.com/quotes/random',
+    target: `(data) => data.quote || 'Error'`
+  },
   typography: {
     class: 'prose text-base',
     blockquoteStyle: 'italic',

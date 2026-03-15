@@ -1,0 +1,32 @@
+---
+import { Button } from 'astro-pure/user'
+import { cn } from 'astro-pure/utils'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import { integ } from '@/site-config'
+
+const meta = {
+  title: 'Site Policy',
+  description: 'Site usage and content notes'
+}
+---
+
+<PageLayout {meta}>
+  <Button title='Back' href='/' variant='back' />
+  <main class='mt-6 lg:mt-10'>
+    <div id='content-header' class='animate'>
+      <h1 class='mb-6 text-3xl font-medium'>Site Policy</h1>
+    </div>
+
+    <div id='content' class={cn('animate mt-8 max-w-none md:min-w-[45ch]', integ.typography.class)}>
+      <p>
+        This page is a lightweight placeholder for site policy information. When I finish drafting a
+        full privacy policy, copyright note, or usage terms, they will be linked from here.
+      </p>
+      <ul>
+        <li>Content on this site reflects personal notes, writing, and project records.</li>
+        <li>Please do not republish full posts without permission.</li>
+        <li>External links are provided for reference and may change over time.</li>
+      </ul>
+    </div>
+  </main>
+</PageLayout>

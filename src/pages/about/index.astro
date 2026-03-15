@@ -1,0 +1,30 @@
+---
+import CommonPage from '@/layouts/CommonPage.astro'
+
+const headings = [
+  { depth: 2, slug: 'about-me', text: 'About Me' },
+  { depth: 2, slug: 'focus', text: 'Focus' },
+  { depth: 2, slug: 'this-site', text: 'This Site' }
+]
+---
+
+<CommonPage title='About' {headings}>
+  <h2 id='about-me'>About Me</h2>
+  <p>
+    I'm Firom Mao, a student working in microelectronics and related engineering topics. I use this
+    site to collect study notes, technical writing, and things I want to revisit later.
+  </p>
+
+  <h2 id='focus'>Focus</h2>
+  <ul>
+    <li>Digital design and hardware-related workflows</li>
+    <li>FPGA, ASIC, EDA, and adjacent tooling</li>
+    <li>Learning notes, reading notes, and long-form posts</li>
+  </ul>
+
+  <h2 id='this-site'>This Site</h2>
+  <p>
+    The site now keeps only the blog features I actually want to use. Template demo content has been
+    removed, but the core pages remain available so the structure is still easy to extend later.
+  </p>
+</CommonPage>

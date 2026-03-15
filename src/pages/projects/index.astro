@@ -1,0 +1,21 @@
+---
+import { Button } from 'astro-pure/user'
+import CommonPage from '@/layouts/CommonPage.astro'
+
+const headings = [
+  { depth: 2, slug: 'current-work', text: 'Current Work' },
+  { depth: 2, slug: 'source-code', text: 'Source Code' }
+]
+---
+
+<CommonPage title='Projects' {headings}>
+  <h2 id='current-work'>Current Work</h2>
+  <p>
+    This page is intentionally simple for now. I'll use it to list finished projects, experiments,
+    and public notes once they are ready to share.
+  </p>
+
+  <h2 id='source-code'>Source Code</h2>
+  <p>The source for this site is public and will continue to evolve with the blog itself.</p>
+  <Button title='View repository' href='https://github.com/FiromMao/firommao.github.io' />
+</CommonPage>

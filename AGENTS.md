@@ -160,10 +160,11 @@ Repository guide for coding agents working in `/home/grayred/firommao.github.io`
 
 ## Current Handoff
 
-- The starter/template content has been heavily cleaned out: demo pages, friend-links, sponsorship pages, placeholder legal pages, docs content, sample posts, and related assets were removed.
+- The starter/template content has been heavily cleaned out: docs content, sample posts, sponsorship/demo assets, and other placeholder material were removed.
 - `README.md` is now a usage guide for this site rather than upstream theme marketing docs.
 - `src/pages/index.astro` was simplified to a compact personal-blog homepage with intro plus latest posts.
-- `src/site.config.ts` was reduced to blog-focused navigation and Waline is disabled by default to avoid using the template's third-party comment service.
+- Lightweight `About`, `Projects`, `Links`, and `Site Policy` pages were restored so the site keeps those features without the original template filler content.
+- `src/site.config.ts` keeps the required `astro-pure` integration fields, restores basic site navigation, and disables Waline by default to avoid using the template's third-party comment service.
 - `astro.config.ts` now points `site` at `https://firommao.github.io`.
 - This environment does not have `bun`, so `bun lint`, `bun check`, `bun format`, and `bun run build` could not be executed here.
 - On the next machine, first run `bun install`, then `bun lint`, `bun check`, and `bun run build` before making further structural edits.

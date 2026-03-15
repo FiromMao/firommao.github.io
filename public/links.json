@@ -1,0 +1,14 @@
+{
+  "friends": [
+    {
+      "id_name": "friends",
+      "desc": "Sites I read and recommend",
+      "link_list": []
+    },
+    {
+      "id_name": "special-links",
+      "desc": "Useful places around the indie web",
+      "link_list": []
+    }
+  ]
+}
