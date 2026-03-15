@@ -1,18 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
+
 /* Font */
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
-  font-style: italic;
-  font-display: swap;
-}
 html {
-  font-family: 'Satoshi', sans-serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-sans);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.prose,
+.prose p,
+.prose li,
+.prose blockquote {
+  font-family: var(--font-sans);
+}
+
+.prose blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.05em;
+}
+
+button,
+input,
+select,
+textarea,
+a,
+samp {
+  font-family: inherit;
 }
 
 /* Theme */
