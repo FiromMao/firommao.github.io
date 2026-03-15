@@ -410,7 +410,7 @@ astro.config.ts
 当前站点地址：
 
 ```ts
-site: 'https://firommao.github.io'
+site: 'https://firommao.top'
 ```
 
 如果以后换自定义域名，记得这里也要一起改。

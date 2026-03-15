@@ -78,7 +78,7 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || '' },
-      { name: 'Link', val: 'https://firommao.github.io' },
+      { name: 'Link', val: 'https://firommao.top' },
       { name: 'Avatar', val: '/favicon/favicon.ico' }
     ],
     cacheAvatar: false
